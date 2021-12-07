@@ -1,0 +1,122 @@
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    .country {
+        .country-head {
+            margin-top: 20px;
+            text-align: center;
+            justify-content: space-between;
+
+            .box-usa {
+                button {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-top: #5e5e5e solid 1px;
+                    border-left: #5e5e5e solid 1px;
+                    border-right: #5e5e5e solid 1px;
+                    width: 110px;
+                    height: 50px;
+                    color: white;
+                }
+            }
+
+            .box-france {
+                button {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-top: #5e5e5e solid 1px;
+                    border-left: #5e5e5e solid 1px;
+                    border-right: #5e5e5e solid 1px;
+                    width: 110px;
+                    height: 50px;
+                    color: white;
+                }
+            }
+
+            .box-gb {
+                button {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-top: #5e5e5e solid 1px;
+                    border-left: #5e5e5e solid 1px;
+                    border-right: #5e5e5e solid 1px;
+                    width: 110px;
+                    height: 50px;
+                    color: white;
+                }
+            }
+
+            .box-germany {
+                button {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-top: #5e5e5e solid 1px;
+                    border-left: #5e5e5e solid 1px;
+                    border-right: #5e5e5e solid 1px;
+                    width: 110px;
+                    height: 50px;
+                    color: white;
+                }
+            }
+        }
+
+        .country-body {
+            height: 200px;
+            width: 500px;
+            background-color: whitesmoke;
+            border: #5e5e5e solid 1px;
+            border-top: #5e5e5e solid 3px;
+            position: relative;
+            .body-usa{
+                position: absolute;
+                .image{
+                    img{
+                        padding-top: 20px;
+                        width: 175px;
+                        height: 175px;
+                    }
+                }
+                
+            }
+            .body-fra{
+                position: absolute;
+                .image{
+                    img{
+                        margin-top: 26px;
+                        margin-left: 4px;
+                        width: 155px;
+                       
+                    }
+                }
+            }
+            .body-gb{
+                position: absolute;
+                .image{
+                    img{
+                        margin-top: 5px;
+                        margin-left: 4px;
+                        width: 155px;
+                        height: 185px;
+                       
+                    }
+                }
+            }
+            .body-ger{
+                position: absolute;
+                .image{
+                    img{
+                        margin-top: 5px;
+                        margin-left: 4px;
+                        width: 155px;
+                        height: 185px;
+                       
+                    }
+                }
+            }
+        }
+
+    }
+
+}
