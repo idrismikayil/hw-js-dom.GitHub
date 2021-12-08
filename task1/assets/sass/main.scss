@@ -1,5 +1,4 @@
 .container {
-    width: 100vw;
     display: flex;
     justify-content: center;
 
@@ -13,6 +12,8 @@
                 button {
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
                     border-top: #5e5e5e solid 1px;
                     border-left: #5e5e5e solid 1px;
                     border-right: #5e5e5e solid 1px;
@@ -26,9 +27,12 @@
                 button {
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
                     border-top: #5e5e5e solid 1px;
                     border-left: #5e5e5e solid 1px;
                     border-right: #5e5e5e solid 1px;
+
                     width: 110px;
                     height: 50px;
                     color: white;
@@ -39,6 +43,8 @@
                 button {
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
                     border-top: #5e5e5e solid 1px;
                     border-left: #5e5e5e solid 1px;
                     border-right: #5e5e5e solid 1px;
@@ -52,6 +58,8 @@
                 button {
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
                     border-top: #5e5e5e solid 1px;
                     border-left: #5e5e5e solid 1px;
                     border-right: #5e5e5e solid 1px;
@@ -69,49 +77,57 @@
             border: #5e5e5e solid 1px;
             border-top: #5e5e5e solid 3px;
             position: relative;
-            .body-usa{
+
+            .body-usa {
                 position: absolute;
-                .image{
-                    img{
+
+                .image {
+                    img {
                         padding-top: 20px;
                         width: 175px;
                         height: 175px;
                     }
                 }
-                
+
             }
-            .body-fra{
+
+            .body-fra {
                 position: absolute;
-                .image{
-                    img{
+
+                .image {
+                    img {
                         margin-top: 26px;
                         margin-left: 4px;
                         width: 155px;
-                       
+
                     }
                 }
             }
-            .body-gb{
+
+            .body-gb {
                 position: absolute;
-                .image{
-                    img{
+
+                .image {
+                    img {
                         margin-top: 5px;
                         margin-left: 4px;
                         width: 155px;
                         height: 185px;
-                       
+
                     }
                 }
             }
-            .body-ger{
+
+            .body-ger {
                 position: absolute;
-                .image{
-                    img{
+
+                .image {
+                    img {
                         margin-top: 5px;
                         margin-left: 4px;
                         width: 155px;
                         height: 185px;
-                       
+
                     }
                 }
             }

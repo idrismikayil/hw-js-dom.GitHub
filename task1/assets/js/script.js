@@ -12,7 +12,6 @@ usaBtn.onclick = function () {
     fra.classList.add("d-none")
     gb.classList.add("d-none")
     ger.classList.add("d-none")
-
 }
 fraBtn.onclick = function () {
     fra.classList.remove("d-none")
