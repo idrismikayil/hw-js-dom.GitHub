@@ -16,210 +16,48 @@ let submit = document.querySelector(".submit");
 
 submit.onclick = function () {
     if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-
         window.location.reload();
-
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() != password.value.trim()) {
-
+    }
+    if(!firstname.value.trim()){
+        nameEmpty.classList.remove("d-none")
+    }
+    else(
         nameEmpty.classList.add("d-none")
+    )
+    if (!surname.value.trim()) {
+        surnameEmpty.classList.remove("d-none")
+    }
+    else{
         surnameEmpty.classList.add("d-none")
+    }
+    if (!email.value.trim()) {
+        emailEmpty.classList.remove("d-none")
+    }
+    else{
         emailEmpty.classList.add("d-none")
+    }
+    if (!password.value.trim()) {
+        passwordEmpty.classList.remove("d-none")
+    }
+    else{
         passwordEmpty.classList.add("d-none")
+    }
+    if(password.value.trim() && password.value.trim().length < 8){
+        passwordLength.classList.remove("d-none")
+    }
+    else{
         passwordLength.classList.add("d-none")
+    }
+    if (!confirm.value.trim()) {
+        cPasswordEmpty.classList.remove("d-none")
+    }
+    else{
         cPasswordEmpty.classList.add("d-none")
+    }
+    if (password.value.trim() && confirm.value.trim() && confirm.value.trim() != password.value.trim()) {
         cPasswordSame.classList.remove("d-none")
-
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length <= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.remove("d-none")
-        cPasswordEmpty.classList.add("d-none")
+    }
+    else{
         cPasswordSame.classList.add("d-none")
-
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length <= 8 && confirm.value.trim() && confirm.value.trim() != password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.remove("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.remove("d-none")
-    } else if (!firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.remove("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && !surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.remove("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && !email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && !password.value.trim() && confirm.value.trim() && confirm.value.trim() != password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.remove("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && !confirm.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.remove("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length <= 8 && !confirm.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.remove("d-none")
-        cPasswordEmpty.classList.remove("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (!firstname.value.trim() && !surname.value.trim() && !email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.remove("d-none")
-        surnameEmpty.classList.remove("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (!firstname.value.trim() && !surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.remove("d-none")
-        surnameEmpty.classList.remove("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && !surname.value.trim() && !email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.remove("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (!firstname.value.trim() && surname.value.trim() && !email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.remove("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (!firstname.value.trim() && !surname.value.trim() && !email.value.trim() && !password.value.trim() && confirm.value.trim()) {
-        nameEmpty.classList.remove("d-none")
-        surnameEmpty.classList.remove("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.remove("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (!firstname.value.trim() && !surname.value.trim() && !email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() != password.value.trim()) {
-        nameEmpty.classList.remove("d-none")
-        surnameEmpty.classList.remove("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.remove("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.remove("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && !password.value.trim() && !confirm.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.remove("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.remove("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && !email.value.trim() && password.value.trim() && password.value.trim().length <= 8 && confirm.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.remove("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && !email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() != password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.remove("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && !email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && !confirm.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.remove("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && !email.value.trim() && !password.value.trim() && !confirm.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.remove("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.remove("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && !surname.value.trim() && !email.value.trim() && !password.value.trim() && !confirm.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.remove("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.remove("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.remove("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else if (firstname.value.trim() && surname.value.trim() && email.value.trim() && password.value.trim() && password.value.trim().length >= 8 && confirm.value.trim() && confirm.value.trim() == password.value.trim()) {
-        nameEmpty.classList.add("d-none")
-        surnameEmpty.classList.add("d-none")
-        emailEmpty.classList.add("d-none")
-        passwordEmpty.classList.add("d-none")
-        passwordLength.classList.add("d-none")
-        cPasswordEmpty.classList.add("d-none")
-        cPasswordSame.classList.add("d-none")
-    } else {
-        nameEmpty.classList.remove("d-none")
-        surnameEmpty.classList.remove("d-none")
-        emailEmpty.classList.remove("d-none")
-        passwordEmpty.classList.remove("d-none")
-        cPasswordEmpty.classList.remove("d-none")
     }
 }
